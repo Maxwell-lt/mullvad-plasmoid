@@ -1,0 +1,17 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Mullvad Info Plasmoid
+Comment=Info panel for Mullvad VPN connections
+Type=Service
+
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Author=Maxwell L-T
+X-KDE-PluginInfo-Email=maxwell.lt@live.com
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=maxwell_lt.plasma.mullvad
+X-KDE-PluginInfo-Version=2.0
+X-KDE-PluginInfo-Website=plasma.kde.org
+X-KDE-ServiceTypes=Plasma/Applet
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml
+X-KDE-PluginInfo-Category=System Information
