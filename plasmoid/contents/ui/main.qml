@@ -1,11 +1,13 @@
-import QtQuick 2.0
-import QtQuick.Layouts 1.0
+import QtQuick 2.2
+import QtQuick.Layouts 1.1
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 Item {
     id:root
-
+    anchors.fill: parent
     width: 300
     height: 300
+
     property string ip: ""
     property bool connected: false
     property string connectionType: ""
@@ -39,6 +41,10 @@ Item {
         xhr.send()
     }
 
+    FontLoader {
+        source: '../fonts/Cabin-Regular.ttf'
+    }
+
     Timer {
         running: true
         repeat: true
@@ -62,6 +68,7 @@ Item {
         Text {
             anchors.centerIn: parent
             color: '#eee'
+            font.family: Cabin
             font.pointSize: 20
             font.weight: Font.Bold
             text: 'MULLVAD STATUS'
@@ -84,6 +91,7 @@ Item {
             Text {
                 id: connectedText
                 color: root.connected ? '#44ad4d' : '#e34039'
+                font.family: Cabin
                 font.pointSize: 12
                 font.weight: Font.ExtraBold
                 text: root.connected ? 'SECURE CONNECTION' : 'DISCONNECTED'
@@ -92,6 +100,7 @@ Item {
             Text {
                 id: locationText
                 color: '#fff'
+                font.family: Cabin
                 font.pointSize: 18
                 font.weight: Font.Bold
                 text: root.city + '\n' + root.country
@@ -100,6 +109,7 @@ Item {
             Text {
                 id: nodeText
                 color: '#ccc'
+                font.family: Cabin
                 font.pointSize: 10
                 text: root.exitName
             }
@@ -107,6 +117,7 @@ Item {
             Text {
                 id: typeText
                 color: '#ccc'
+                font.family: Cabin
                 font.pointSize: 10
                 text: root.connectionType
             }
@@ -114,6 +125,7 @@ Item {
             Text {
                 id: ipText
                 color: '#ccc'
+                font.family: Cabin
                 font.pointSize: 10
                 text: root.ip
             }
